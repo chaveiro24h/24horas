@@ -177,6 +177,7 @@ Atendimento imediato na sua região
 </a>
 
 <script>
+// contador de urgência (mantido, não incomoda)
 let vagas = 3;
 
 setInterval(() => {
@@ -184,10 +185,6 @@ setInterval(() => {
   if (vagas < 1) vagas = 3;
   document.getElementById("contador").innerText = vagas;
 }, 4000);
-
-setTimeout(() => {
-  alert("⚡ Atendimento rápido! Clique agora e resolva!");
-}, 6000);
 </script>
 
 </body>
