@@ -3,114 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaveiro 24h | Atendimento Rápido na Sua Região</title>
+<title>Central de Chaveiro 24h | Atendimento Imediato</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  margin:0;
+  font-family: Arial;
+  background:#f5f5f5;
+  color:#333;
 }
 
-/* TOPO */
 .topo {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  font-size:14px;
 }
 
-/* HERO */
 .hero {
-  padding: 30px 20px;
-  text-align: center;
-  background: white;
+  background:#fff;
+  padding:30px 20px;
+  text-align:center;
 }
 
-.hero h1 {
-  color: #ffcc00;
-  margin-bottom: 10px;
+h1 {
+  color:#ffcc00;
 }
 
-.hero p {
-  font-size: 18px;
-}
-
-/* BOTÕES */
 .btn {
-  display: block;
-  margin: 12px auto;
-  padding: 18px;
-  width: 85%;
-  max-width: 350px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+  display:block;
+  margin:12px auto;
+  padding:18px;
+  width:90%;
+  max-width:360px;
+  border-radius:10px;
+  font-size:18px;
+  font-weight:bold;
+  text-decoration:none;
 }
 
-.whatsapp {
-  background: #25D366;
-  color: white;
+.whatsapp { background:#25D366; color:#fff; }
+.ligar { background:red; color:#fff; }
+
+.cidades {
+  margin-top:15px;
+  font-size:14px;
+  color:#666;
 }
 
-.ligar {
-  background: red;
-  color: white;
+.servicos, .prova {
+  padding:25px;
+  text-align:center;
 }
 
-/* STATUS */
-.status {
-  margin-top: 15px;
-  color: green;
-  font-weight: bold;
-}
+.servicos { background:#fff; }
+.prova { background:#eee; }
 
-/* SERVIÇOS */
-.servicos {
-  background: #fff;
-  padding: 25px;
-  text-align: center;
-}
-
-.servicos h2 {
-  margin-bottom: 15px;
-}
-
-.servicos div {
-  margin: 10px 0;
-}
-
-/* PROVA */
-.prova {
-  background: #eee;
-  padding: 20px;
-  text-align: center;
-  font-size: 15px;
-}
-
-/* RODAPÉ */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-
-/* BOTÃO FLUTUANTE */
 .flutuante {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 18px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:18px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
 }
 </style>
 </head>
@@ -118,23 +77,23 @@ footer {
 <body>
 
 <div class="topo">
-🚨 Atendimento 24h • Chegada rápida
+🚨 Central 24h • Atendimento imediato em várias regiões
 </div>
 
 <section class="hero">
   <h1>🔑 Chaveiro 24 Horas</h1>
-  <p>Atendimento imediato na sua região</p>
+  <p>Enviamos o profissional mais próximo de você</p>
 
   <button class="btn whatsapp" onclick="enviarLocalizacao()">
-    💬 Chamar no WhatsApp com localização
+    💬 Pedir Chaveiro no WhatsApp
   </button>
 
   <a href="tel:+5561981757812" class="btn ligar">
     📞 Ligar Agora
   </a>
 
-  <div class="status" id="status">
-    ✔ Técnico disponível próximo de você
+  <div class="cidades">
+📍 Atendemos sua região agora
   </div>
 </section>
 
@@ -143,22 +102,16 @@ footer {
   <div>🚪 Abertura de portas</div>
   <div>🚗 Chaveiro automotivo</div>
   <div>🔐 Troca de fechaduras</div>
-  <div>🕒 Atendimento 24h</div>
+  <div>⚡ Atendimento rápido</div>
 </section>
 
 <section class="prova">
-⭐⭐⭐⭐⭐ Mais de 300 clientes atendidos<br><br>
-"Chegou em menos de 20 minutos!"<br><br>
-"Profissional rápido e confiável"
+⭐⭐⭐⭐⭐ Atendimento rápido e profissional<br><br>
+"Resolveram em poucos minutos"<br><br>
+"Preço justo e confiança"
 </section>
 
-<footer>
-© 2026 Chaveiro 24h • Atendimento imediato
-</footer>
-
-<a href="#" onclick="enviarLocalizacao()" class="flutuante">
-💬
-</a>
+<a href="#" onclick="enviarLocalizacao()" class="flutuante">💬</a>
 
 <script>
 function enviarLocalizacao() {
@@ -168,14 +121,13 @@ function enviarLocalizacao() {
       let lat = pos.coords.latitude;
       let lon = pos.coords.longitude;
 
-      let mensagem = `Olá, preciso de um chaveiro urgente. Estou neste local: https://www.google.com/maps?q=${lat},${lon}`;
+      let mensagem = `Olá, preciso de um chaveiro urgente. Minha localização: https://www.google.com/maps?q=${lat},${lon}`;
 
       let url = `https://wa.me/5561981757812?text=${encodeURIComponent(mensagem)}`;
-
       window.location.href = url;
 
     }, function() {
-      let mensagem = "Olá, preciso de um chaveiro urgente. Pode me atender agora?";
+      let mensagem = "Olá, preciso de um chaveiro urgente. Pode enviar um profissional?";
       let url = `https://wa.me/5561981757812?text=${encodeURIComponent(mensagem)}`;
       window.location.href = url;
     });
