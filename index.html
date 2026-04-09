@@ -3,60 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaveiro 24h Urgente | Atendimento Imediato</title>
-
-<meta name="theme-color" content="#ff0000">
+<title>Chaveiro 24h | Atendimento Rápido na Sua Região</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #000;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* TOPO */
+.topo {
+  background: #111;
   color: #fff;
   text-align: center;
+  padding: 15px;
+  font-size: 14px;
 }
 
-.topo-alerta {
-  background: red;
-  padding: 10px;
-  font-weight: bold;
-  animation: piscar 1s infinite;
-}
-
+/* HERO */
 .hero {
   padding: 30px 20px;
+  text-align: center;
+  background: white;
 }
 
-h1 {
+.hero h1 {
   color: #ffcc00;
-  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-.urgente span {
-  color: red;
-  font-size: 28px;
-}
-
-.sub {
-  margin: 15px 0;
-}
-
-.btn {
-  display: block;
-  margin: 10px auto;
-  padding: 18px;
-  width: 80%;
-  max-width: 320px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
+.hero p {
   font-size: 18px;
 }
 
-.ligar {
-  background: red;
-  color: white;
-  animation: pulse 1.5s infinite;
+/* BOTÕES */
+.btn {
+  display: block;
+  margin: 12px auto;
+  padding: 18px;
+  width: 85%;
+  max-width: 350px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .whatsapp {
@@ -64,128 +56,131 @@ h1 {
   color: white;
 }
 
-.gigante {
-  background: #ff0000;
-  font-size: 22px;
+.ligar {
+  background: red;
+  color: white;
 }
 
-.beneficios {
-  background: #111;
-  padding: 20px;
+/* STATUS */
+.status {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
 }
 
-.beneficios div {
+/* SERVIÇOS */
+.servicos {
+  background: #fff;
+  padding: 25px;
+  text-align: center;
+}
+
+.servicos h2 {
+  margin-bottom: 15px;
+}
+
+.servicos div {
   margin: 10px 0;
 }
 
+/* PROVA */
 .prova {
+  background: #eee;
   padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* RODAPÉ */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
   font-size: 14px;
-  color: #ccc;
 }
 
-.cta-final {
-  padding: 30px;
-}
-
+/* BOTÃO FLUTUANTE */
 .flutuante {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25D366;
-  padding: 20px;
-  border-radius: 50%;
-  font-size: 24px;
-  text-decoration: none;
   color: white;
-}
-
-.urgencia-box {
-  margin-top: 15px;
-  color: #ffcc00;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-@keyframes piscar {
-  50% { opacity: 0.5; }
+  padding: 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
 }
 </style>
 </head>
 
 <body>
 
-<div class="topo-alerta">
-🚨 ATENDIMENTO 24H • CHEGAMOS RÁPIDO
+<div class="topo">
+🚨 Atendimento 24h • Chegada rápida
 </div>
 
-<header class="hero">
+<section class="hero">
+  <h1>🔑 Chaveiro 24 Horas</h1>
+  <p>Atendimento imediato na sua região</p>
 
-<h1>🔑 CHAVEIRO 24 HORAS</h1>
+  <button class="btn whatsapp" onclick="enviarLocalizacao()">
+    💬 Chamar no WhatsApp com localização
+  </button>
 
-<h2 class="urgente">
-Porta trancou? Chave quebrou?<br>
-<span>RESOLVEMOS AGORA!</span>
-</h2>
+  <a href="tel:+5561981757812" class="btn ligar">
+    📞 Ligar Agora
+  </a>
 
-<p class="sub">
-Atendimento imediato na sua região
-</p>
+  <div class="status" id="status">
+    ✔ Técnico disponível próximo de você
+  </div>
+</section>
 
-<div class="cta-principal">
-
-<a href="tel:+5561981757812" class="btn ligar">
-📞 LIGAR AGORA
-</a>
-
-<a href="https://wa.me/5561981757812" class="btn whatsapp">
-💬 CHAMAR NO WHATSAPP
-</a>
-
-</div>
-
-<div class="urgencia-box">
-⚡ Apenas <strong id="contador">3</strong> técnicos disponíveis agora
-</div>
-
-</header>
-
-<section class="beneficios">
-<div>🚗 Atendimento automotivo</div>
-<div>🏠 Abertura de portas</div>
-<div>🔐 Troca de fechaduras</div>
-<div>⚡ Chegada rápida</div>
+<section class="servicos">
+  <h2>Serviços</h2>
+  <div>🚪 Abertura de portas</div>
+  <div>🚗 Chaveiro automotivo</div>
+  <div>🔐 Troca de fechaduras</div>
+  <div>🕒 Atendimento 24h</div>
 </section>
 
 <section class="prova">
-⭐⭐⭐⭐⭐ Mais de 500 atendimentos realizados<br>
-"Chegaram muito rápido, recomendo!"
+⭐⭐⭐⭐⭐ Mais de 300 clientes atendidos<br><br>
+"Chegou em menos de 20 minutos!"<br><br>
+"Profissional rápido e confiável"
 </section>
 
-<section class="cta-final">
-<h2>Não fique esperando!</h2>
+<footer>
+© 2026 Chaveiro 24h • Atendimento imediato
+</footer>
 
-<a href="tel:+5561981757812" class="btn gigante">
-📞 RESOLVER AGORA
-</a>
-
-</section>
-
-<a href="https://wa.me/5561981757812" class="btn flutuante">
+<a href="#" onclick="enviarLocalizacao()" class="flutuante">
 💬
 </a>
 
 <script>
-let vagas = 3;
+function enviarLocalizacao() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(pos) {
 
-setInterval(() => {
-  vagas--;
-  if (vagas < 1) vagas = 3;
-  document.getElementById("contador").innerText = vagas;
-}, 4000);
+      let lat = pos.coords.latitude;
+      let lon = pos.coords.longitude;
+
+      let mensagem = `Olá, preciso de um chaveiro urgente. Estou neste local: https://www.google.com/maps?q=${lat},${lon}`;
+
+      let url = `https://wa.me/5561981757812?text=${encodeURIComponent(mensagem)}`;
+
+      window.location.href = url;
+
+    }, function() {
+      let mensagem = "Olá, preciso de um chaveiro urgente. Pode me atender agora?";
+      let url = `https://wa.me/5561981757812?text=${encodeURIComponent(mensagem)}`;
+      window.location.href = url;
+    });
+  }
+}
 </script>
 
 </body>
