@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chaveiro 24h Premium | Atendimento Imediato</title>
 
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18062216976"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18062216976');
+</script>
+
 <style>
 body {
   margin: 0;
@@ -117,11 +126,12 @@ Atendimento 24h • Profissionais verificados • Chegada rápida
   <h1>🔑 Chaveiro 24h Premium</h1>
   <p>Enviamos um profissional qualificado até você em minutos</p>
 
-  <button class="btn whatsapp" onclick="enviarLocalizacao()">
+  <button class="btn whatsapp" onclick="enviarLocalizacao(); gtag('event','conversion',{'send_to':'AW-18062216976/CONVERSAO_WHATSAPP'});">
     💬 Solicitar atendimento agora
   </button>
 
-  <a href="tel:+5561981757812" class="btn ligar">
+  <a href="tel:+5561981757812" class="btn ligar"
+     onclick="gtag('event','conversion',{'send_to':'AW-18062216976/CONVERSAO_LIGACAO'});">
     📞 Falar por telefone
   </a>
 </section>
@@ -140,7 +150,7 @@ Atendimento 24h • Profissionais verificados • Chegada rápida
   "Equipe educada e preço justo"
 </div>
 
-<a href="#" onclick="enviarLocalizacao()" class="flutuante">💬</a>
+<a href="#" onclick="enviarLocalizacao(); gtag('event','conversion',{'send_to':'AW-18062216976/CONVERSAO_WHATSAPP'});" class="flutuante">💬</a>
 
 <script>
 function enviarLocalizacao() {
