@@ -126,7 +126,7 @@ Atendimento 24h • Profissionais verificados • Chegada rápida
   <h1>🔑 Chaveiro 24h Premium</h1>
   <p>Enviamos um profissional qualificado até você em minutos</p>
 
-  <button class="btn whatsapp" onclick="enviarLocalizacao(); gtag('event','conversion',{'send_to':'AW-18062216976/CONVERSAO_WHATSAPP'});">
+  <button class="btn whatsapp" onclick="enviarLocalizacao()">
     💬 Solicitar atendimento agora
   </button>
 
@@ -150,10 +150,18 @@ Atendimento 24h • Profissionais verificados • Chegada rápida
   "Equipe educada e preço justo"
 </div>
 
-<a href="#" onclick="enviarLocalizacao(); gtag('event','conversion',{'send_to':'AW-18062216976/CONVERSAO_WHATSAPP'});" class="flutuante">💬</a>
+<a href="#" onclick="enviarLocalizacao()" class="flutuante">💬</a>
 
 <script>
 function enviarLocalizacao() {
+
+  // CONVERSÃO WHATSAPP
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18062216976/M7A7CJ7Q0ZocEJCe3qRD',
+    'value': 1.0,
+    'currency': 'BRL'
+  });
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(pos) {
 
@@ -163,12 +171,20 @@ function enviarLocalizacao() {
       let mensagem = `Olá, preciso de atendimento de chaveiro. Minha localização: https://www.google.com/maps?q=${lat},${lon}`;
 
       let url = `https://wa.me/5561981757812?text=${encodeURIComponent(mensagem)}`;
-      window.location.href = url;
+
+      // TEMPO PRA REGISTRAR CONVERSÃO
+      setTimeout(() => {
+        window.location.href = url;
+      }, 1200);
 
     }, function() {
+
       let mensagem = "Olá, preciso de um chaveiro urgente. Pode me atender?";
       let url = `https://wa.me/5561981757812?text=${encodeURIComponent(mensagem)}`;
-      window.location.href = url;
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 1200);
     });
   }
 }
